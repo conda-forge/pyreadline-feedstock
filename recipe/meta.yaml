@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1001
-  script: python setup.py install
+  number: 1002
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: True  # [not win]
 
 requirements:
