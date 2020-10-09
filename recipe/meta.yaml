@@ -17,8 +17,9 @@ build:
   skip: True  # [not win]
 
 requirements:
-  build:
+  host:
     - python
+    - pip
   run:
     - python
 
@@ -33,7 +34,7 @@ test:
 
 about:
   home: http://ipython.org/pyreadline
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: doc/COPYING
 
