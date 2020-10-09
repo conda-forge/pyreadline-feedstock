@@ -12,13 +12,14 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1001
-  script: python setup.py install
+  number: 1002
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: True  # [not win]
 
 requirements:
-  build:
+  host:
     - python
+    - pip
   run:
     - python
 
@@ -33,7 +34,7 @@ test:
 
 about:
   home: http://ipython.org/pyreadline
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: doc/COPYING
 
