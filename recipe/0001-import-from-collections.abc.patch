@@ -1,0 +1,25 @@
+From 949d359e59c441f91022ac1a656518dba552c0dc Mon Sep 17 00:00:00 2001
+From: Morten Lund <melund@gmail.com>
+Date: Fri, 17 Sep 2021 10:17:26 +0200
+Subject: [PATCH] import from collections.abc
+
+---
+ pyreadline/py3k_compat.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pyreadline/py3k_compat.py b/pyreadline/py3k_compat.py
+index ab0f837..a5a7ee7 100644
+--- a/pyreadline/py3k_compat.py
++++ b/pyreadline/py3k_compat.py
+@@ -5,7 +5,7 @@ if sys.version_info[0] >= 3:
+     import collections
+     PY3 = True
+     def callable(x):
+-        return isinstance(x, collections.Callable)
++        return isinstance(x, collections.abc.Callable)
+     
+     def execfile(fname, glob, loc=None):
+         loc = loc if (loc is not None) else glob
+-- 
+2.31.1.windows.1
+
