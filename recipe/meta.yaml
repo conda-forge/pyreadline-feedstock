@@ -10,11 +10,14 @@ source:
   fn: {{ name }}-{{ version }}.zip
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
   sha256: {{ sha256 }}
+  patches:
+    - 0001-import-from-collections.abc.patch
+
 
 build:
-  number: 1003
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 1004
   skip: True  # [not win]
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
