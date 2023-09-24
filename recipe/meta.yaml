@@ -15,7 +15,7 @@ source:
 
 
 build:
-  number: 1007
+  number: 1008
   skip: True  # [not win]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
